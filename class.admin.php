@@ -80,9 +80,12 @@ class Leaflet_Map_Admin
             $main_page = array($this, "shortcode_page");
         }
 
-        add_menu_page("Leaflet Map", "Leaflet Map", $author, $main_link, $main_page, $leaf);
-        add_submenu_page("leaflet-map", __('Settings', 'leaflet-map'), __('Settings', 'leaflet-map'), $admin, "leaflet-map", array($this, "settings_page"));
-        add_submenu_page("leaflet-map", __('Shortcode helper', 'leaflet-map'), __('Shortcode helper', 'leaflet-map'), $author, "leaflet-shortcode-helper", array($this, "shortcode_page"));
+        // add_menu_page("Leaflet Map", "Leaflet Map", $author, $main_link, $main_page, $leaf);
+        add_menu_page("GIS マップ", "GIS マップ", $author, $main_link, $main_page, $leaf);
+        // add_submenu_page("leaflet-map", __('Settings', 'leaflet-map'), __('Settings', 'leaflet-map'), $admin, "leaflet-map", array($this, "settings_page"));
+        add_submenu_page("leaflet-map", __('基本設定', 'leaflet-map'), __('基本設定', 'leaflet-map'), $admin, "leaflet-map", array($this, "settings_page"));
+        // add_submenu_page("leaflet-map", __('Shortcode helper', 'leaflet-map'), __('Shortcode helper', 'leaflet-map'), $author, "leaflet-shortcode-helper", array($this, "shortcode_page"));
+        add_submenu_page("leaflet-map", __('ショートコードヘルパー', 'leaflet-map'), __('ショートコードヘルパー', 'leaflet-map'), $author, "leaflet-shortcode-helper", array($this, "shortcode_page"));
     }
 
     /**

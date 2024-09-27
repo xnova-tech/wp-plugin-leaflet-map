@@ -40,3 +40,10 @@ require_once LEAFLET_MAP__PLUGIN_DIR . 'class.leaflet-map.php';
 register_uninstall_hook(__FILE__, ['Leaflet_Map', 'uninstall']);
 
 add_action('init', ['Leaflet_Map', 'init']);
+
+
+function leaflet_map_load_textdomain() {
+  load_plugin_textdomain('leaflet-map', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+}
+add_action('plugins_loaded', 'leaflet_map_load_textdomain');
+

@@ -197,29 +197,39 @@ class Leaflet_Map_Plugin_Settings
                     '[leaflet-map max_zoom="10"]'
                 )
             ),
+            // 'default_tiling_service' => array(
+            //     'display_name'=>__('Default Tiling Service', 'leaflet-map'),
+            //     'default' => 'other',
+            //     'type' => 'select',
+            //     'options' => array(
+            //         'other' => __('I will provide my own map tile URL', 'leaflet-map'),
+            //         'mapquest' => __('MapQuest (I have an API key)', 'leaflet-map'),
+            //     ),
+            //     'helptext' => __('Choose a tiling service or provide your own.', 'leaflet-map')
+            // ),
             'default_tiling_service' => array(
                 'display_name'=>__('Default Tiling Service', 'leaflet-map'),
                 'default' => 'other',
-                'type' => 'select',
-                'options' => array(
-                    'other' => __('I will provide my own map tile URL', 'leaflet-map'),
-                    'mapquest' => __('MapQuest (I have an API key)', 'leaflet-map'),
-                ),
-                'helptext' => __('Choose a tiling service or provide your own.', 'leaflet-map')
+                'helptext' => ''
             ),
+            // 'mapquest_appkey' => array(
+            //     'display_name'=>__('MapQuest API Key (optional)', 'leaflet-map'),
+            //     'default' => __('Supply an API key if you choose MapQuest', 'leaflet-map'),
+            //     'type' => 'text',
+            //     'noreset' => true,
+            //     'helptext' => sprintf(
+            //         '%1$s <a href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register" target="_blank"> %2$s </a>, %3$s <a href="https://developer.mapquest.com/user/me/apps" target="_blank"> %4$s </a> %5$s',
+            //         __('If you choose MapQuest, you must provide an API key.', 'leaflet-map'),
+            //         __('Sign up', 'leaflet-map'),
+            //         __('then', 'leaflet-map'),
+            //         __('Create a new app', 'leaflet-map'),
+            //         __('then supply the "Consumer Key" here.', 'leaflet-map')
+            //     )
+            // ),
             'mapquest_appkey' => array(
-                'display_name'=>__('MapQuest API Key (optional)', 'leaflet-map'),
+                'display_name'=> '',
                 'default' => __('Supply an API key if you choose MapQuest', 'leaflet-map'),
-                'type' => 'text',
                 'noreset' => true,
-                'helptext' => sprintf(
-                    '%1$s <a href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register" target="_blank"> %2$s </a>, %3$s <a href="https://developer.mapquest.com/user/me/apps" target="_blank"> %4$s </a> %5$s',
-                    __('If you choose MapQuest, you must provide an API key.', 'leaflet-map'),
-                    __('Sign up', 'leaflet-map'),
-                    __('then', 'leaflet-map'),
-                    __('Create a new app', 'leaflet-map'),
-                    __('then supply the "Consumer Key" here.', 'leaflet-map')
-                )
             ),
             'map_tile_url' => array(
                 'display_name'=>__('Map Tile URL', 'leaflet-map'),
@@ -244,15 +254,20 @@ class Leaflet_Map_Plugin_Settings
                     $foreachmap
                 )
             ),
+            // 'detect_retina' => array(
+            //     'display_name' => __('Detect Retina', 'leaflet-map'),
+            //     'default' => '0',
+            //     'type' => 'checkbox',
+            //     'helptext' => sprintf(
+            //         '%1$s %2$s <br /> <code>[leaflet-map detect-retina]</code>',
+            //         __('Fetch tiles at different zoom levels to appear smoother on retina displays.', 'leaflet-map'),
+            //         $foreachmap
+            //     )
+            // ),
             'detect_retina' => array(
                 'display_name' => __('Detect Retina', 'leaflet-map'),
                 'default' => '0',
-                'type' => 'checkbox',
-                'helptext' => sprintf(
-                    '%1$s %2$s <br /> <code>[leaflet-map detect-retina]</code>',
-                    __('Fetch tiles at different zoom levels to appear smoother on retina displays.', 'leaflet-map'),
-                    $foreachmap
-                )
+                'helptext' => ''
             ),
             'tilesize' => array(
                 'display_name' => __('Tile Size', 'leaflet-map'),
@@ -264,25 +279,34 @@ class Leaflet_Map_Plugin_Settings
                     $foreachmap
                 )
             ),
+            // 'mapid' => array(
+            //     'display_name' => __('Tile Id', 'leaflet-map'),
+            //     'default' => null,
+            //     'type' => 'text',
+            //     'helptext' => sprintf(
+            //         '%1$s %2$s <br /> <code>[leaflet-map mapid="mapbox/streets-v11"]</code>',
+            //         __('An id that is passed to L.tileLayer; useful for Mapbox', 'leaflet-map'),
+            //         $foreachmap
+            //     )
+            // ),
             'mapid' => array(
                 'display_name' => __('Tile Id', 'leaflet-map'),
                 'default' => null,
-                'type' => 'text',
-                'helptext' => sprintf(
-                    '%1$s %2$s <br /> <code>[leaflet-map mapid="mapbox/streets-v11"]</code>',
-                    __('An id that is passed to L.tileLayer; useful for Mapbox', 'leaflet-map'),
-                    $foreachmap
-                )
             ),
+            // 'accesstoken' => array(
+            //     'display_name' => __('Access Token', 'leaflet-map'),
+            //     'default' => null,
+            //     'type' => 'text',
+            //     'helptext' => sprintf(
+            //         '%1$s %2$s <br /> <code>[leaflet-map accesstoken="your.mapbox.access.token"]</code>',
+            //         __('An access token that is passed to L.tileLayer; useful for Mapbox tiles', 'leaflet-map'),
+            //         $foreachmap
+            //     )
+            // ),
             'accesstoken' => array(
                 'display_name' => __('Access Token', 'leaflet-map'),
                 'default' => null,
-                'type' => 'text',
-                'helptext' => sprintf(
-                    '%1$s %2$s <br /> <code>[leaflet-map accesstoken="your.mapbox.access.token"]</code>',
-                    __('An access token that is passed to L.tileLayer; useful for Mapbox tiles', 'leaflet-map'),
-                    $foreachmap
-                )
+                'helptext' => ''
             ),
             'zoomoffset' => array(
                 'display_name' => __('Zoom Offset', 'leaflet-map'),
@@ -335,40 +359,63 @@ class Leaflet_Map_Plugin_Settings
                     'leaflet-map'
                 )
             ),
+            // 'geocoder' => array(
+            //     'display_name'=>__('Geocoder', 'leaflet-map'),
+            //     'default' => 'osm',
+            //     'type' => 'select',
+            //     'options' => array(
+            //         'osm' => __('OpenStreetMap Nominatim', 'leaflet-map'),
+            //         'google' => __('Google Maps', 'leaflet-map'),
+            //         'dawa' => __('Denmark Addresses', 'leaflet-map')
+            //     ),
+            //     'helptext' => __('Select the Geocoding provider to use to retrieve addresses defined in shortcode.', 'leaflet-map')
+            // ),
             'geocoder' => array(
-                'display_name'=>__('Geocoder', 'leaflet-map'),
+                'display_name'=>__('', 'leaflet-map'),
                 'default' => 'osm',
-                'type' => 'select',
-                'options' => array(
-                    'osm' => __('OpenStreetMap Nominatim', 'leaflet-map'),
-                    'google' => __('Google Maps', 'leaflet-map'),
-                    'dawa' => __('Denmark Addresses', 'leaflet-map')
-                ),
-                'helptext' => __('Select the Geocoding provider to use to retrieve addresses defined in shortcode.', 'leaflet-map')
+                // 'type' => 'select',
+                // 'options' => array(
+                //     'osm' => __('OpenStreetMap Nominatim', 'leaflet-map'),
+                //     'google' => __('Google Maps', 'leaflet-map'),
+                //     'dawa' => __('Denmark Addresses', 'leaflet-map')
+                // ),
+                'helptext' => __('', 'leaflet-map')
             ),
+            // 'google_appkey' => array(
+            //     'display_name'=>__('Google API Key (optional)', 'leaflet-map'),
+            //     'default' => __('Supply a Google API Key', 'leaflet-map'),
+            //     'type' => 'text',
+            //     'noreset' => true,
+            //     'helptext' => sprintf(
+            //         '%1$s: <a href="https://cloud.google.com/maps-platform/?apis=places" target="_blank">%2$s</a>.  %3$s %4$s',
+            //         __('The Google Geocoder requires an API key with the Places product enabled', 'leaflet-map'),
+            //         __('here', 'leaflet-map'),
+            //         __('You must create a project and set up a billing account, then you will be given an API key.', 'leaflet-map'),
+            //         __('You are unlikely to ever be charged for geocoding.', 'leaflet-map')
+            //     ),
+            // ),
             'google_appkey' => array(
-                'display_name'=>__('Google API Key (optional)', 'leaflet-map'),
+                'display_name'=>__('', 'leaflet-map'),
                 'default' => __('Supply a Google API Key', 'leaflet-map'),
-                'type' => 'text',
                 'noreset' => true,
-                'helptext' => sprintf(
-                    '%1$s: <a href="https://cloud.google.com/maps-platform/?apis=places" target="_blank">%2$s</a>.  %3$s %4$s',
-                    __('The Google Geocoder requires an API key with the Places product enabled', 'leaflet-map'),
-                    __('here', 'leaflet-map'),
-                    __('You must create a project and set up a billing account, then you will be given an API key.', 'leaflet-map'),
-                    __('You are unlikely to ever be charged for geocoding.', 'leaflet-map')
-                ),
+                'helptext' => ''
             ),
+            // 'togeojson_url' => array(
+            //     'display_name'=>__('KML/GPX JavaScript Converter', 'leaflet-map'),
+            //     'default' => 'https://unpkg.com/@mapbox/togeojson@0.16.0/togeojson.js',
+            //     'type' => 'text',
+            //     'helptext' => __('ToGeoJSON converts KML and GPX files to GeoJSON; if you plan to use [leaflet-kml] or [leaflet-gpx] then this library is loaded.  You can change the default if you need.', 'leaflet-map')
+            // ),
             'togeojson_url' => array(
                 'display_name'=>__('KML/GPX JavaScript Converter', 'leaflet-map'),
                 'default' => 'https://unpkg.com/@mapbox/togeojson@0.16.0/togeojson.js',
-                'type' => 'text',
-                'helptext' => __('ToGeoJSON converts KML and GPX files to GeoJSON; if you plan to use [leaflet-kml] or [leaflet-gpx] then this library is loaded.  You can change the default if you need.', 'leaflet-map')
+                'helptext' => ''
             ),
             'shortcode_in_excerpt' => array(
                 'display_name' => __('Show maps in excerpts', 'leaflet-map'),
                 'default' => '0',
                 'type' => 'checkbox',
+                'helptext' => '引用を表示する'
             ),
         );
 

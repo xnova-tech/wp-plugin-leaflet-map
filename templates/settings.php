@@ -8,9 +8,12 @@
  * @author   Benjamin J DeLong <ben@bozdoz.com>
  */
 
-$title = $plugin_data['Name'];
-$description = __('A plugin for creating a Leaflet JS map with a shortcode. Boasts two free map tile services and three free geocoders.', 'leaflet-map');
-$version = $plugin_data['Version'];
+// $title = $plugin_data['Name'];
+// $description = __('A plugin for creating a Leaflet JS map with a shortcode. Boasts two free map tile services and three free geocoders.', 'leaflet-map');
+// $version = $plugin_data['Version'];
+$title = "GIS Map Visualizer";
+$description = "このプラグインは、Tile map、GIS Json コードを簡単に表示させるために開発されました。使い方については、leaflet-shortcode-helper を参考にしてください。";
+$version = "1.0.0";
 ?>
 <div class="wrap">
 
@@ -99,9 +102,11 @@ if ($is_unpkg_url && $db_js_url !== $settings->options[ 'js_url' ]->default) {
 ?>
 
 <p><?php echo $description; ?></p>
-<h3><?php _e('Found an issue?', 'leaflet-map') ?></h3>
-<p><?php _e('Post it to ', 'leaflet-map') ?><b><?php _e('WordPress Support', 'leaflet-map') ?></b>: <a href="https://wordpress.org/support/plugin/leaflet-map/" target="_blank">Leaflet Map (WordPress)</a></p>
-<p><?php _e('Add an issue on ', 'leaflet-map') ?><b>GitHub</b>: <a href="https://github.com/bozdoz/wp-plugin-leaflet-map/issues" target="_blank">Leaflet Map (GitHub)</a></p>
+
+<!-- <h3><?php _e('Found an issue?', 'leaflet-map') ?></h3> -->
+<!-- <p><?php _e('Post it to ', 'leaflet-map') ?><b><?php _e('WordPress Support', 'leaflet-map') ?></b>: <a href="https://wordpress.org/support/plugin/leaflet-map/" target="_blank">Leaflet Map (WordPress)</a></p> -->
+<!-- <p><?php _e('Add an issue on ', 'leaflet-map') ?><b>GitHub</b>: <a href="https://github.com/bozdoz/wp-plugin-leaflet-map/issues" target="_blank">Leaflet Map (GitHub)</a></p> -->
+<p>問題があれば、fukasawa<ｱｯﾄﾏｰｸ>xnova-tech.com まで連絡してください。</p>
 
 <div class="wrap">
     <div class="wrap">
